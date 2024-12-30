@@ -419,20 +419,29 @@ kinds of desktops.</p>
                     <div class="col-sm-6 footer-left">
                     	<h3>Contact us</h3>
                     	<div class="contact-form">
-                    		<form role="form" action="assets/contact.php" method="post">
+                    		<form onsubmit = "return validate()" id="gform" name="contactForm" method="post"  action="https://script.google.com/macros/s/AKfycbyFBiFErn_Hmlr3z6Q49CH4yiJrdiV4wW8QOMa-ZTMTj7RTzk5PDFxLtri11Fe4yufP/exec" >
 		                    	<div class="form-group">
 		                    		<label class="sr-only" for="contact-email">Email</label>
-		                        	<input type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
-		                        </div>
+		                        	<input id="email" type="text" name="email" placeholder="Email..." class="contact-email form-control" id="contact-email">
+									<span class="errors"></span><br>
+								</div>
+								<div class="form-group">
+		                    		<label class="sr-only" for="contact-phone">Email</label>
+		                        	<input id="phone" type="text" name="phone" placeholder="Phone number" class="contact-phone form-control" id="contact-email">
+									<span class="errors"></span><br>
+								</div>
 		                        <div class="form-group">
-		                        	<label class="sr-only" for="contact-subject">Subject</label>
-		                        	<input type="text" name="subject" placeholder="Subject..." class="contact-subject form-control" id="contact-subject">
-		                        </div>
+		                        	<label class="sr-only" for="contact-subject">Name</label>
+		                        	<input id="name" type="text" name="name" placeholder="Full Name..." class="contact-subject form-control" id="contact-subject">
+									<span class="errors"></span><br>
+								</div>
 		                        <div class="form-group">
 		                        	<label class="sr-only" for="contact-message">Message</label>
-		                        	<textarea name="message" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
+		                        	<textarea id="message" name="message" placeholder="Message..." class="contact-message form-control" id="contact-message"></textarea>
+									<span class="errors"></span><br>
 		                        </div>
-		                        <button type="submit" class="btn">Send message</button>
+		                        <button value="Submit" type="submit" class="btn">Send message</button>
+
 		                    </form>
                     	</div>
                     </div>
